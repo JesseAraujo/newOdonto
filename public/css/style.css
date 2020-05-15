@@ -45,6 +45,16 @@ button{
         }
     }
 
+.title-section{
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;   
+    color: rgb(73, 190, 216);
+    margin: 80px 0;
+    box-shadow: 0 20px 20px -15px rgba(1, 1, 1, 0.1);
+    padding-bottom: 10px;
+}
+
 
 /*---- H E A D E R --------------------------------------------------------------------------*/
 
@@ -58,9 +68,7 @@ header{
     display: flex;
     flex-direction: column;
     box-shadow: 0 10px 10px -5px rgba(50, 90, 99, 0.08);
-
-    transition: all 90ms linear;
-
+    
     z-index: 9;
 }
 
@@ -75,10 +83,12 @@ header a img:hover{
     transition: 300ms ease;
 }
 
-header#fixed{
+header.fixed{
     position: fixed;
     opacity: 0.99;
+    top: 0;
     padding: 3rem 0rem 1rem;
+    transition: all .2s;
 }
 
 /*---- N A V --------------------------------------------------------------------------*/
@@ -92,9 +102,6 @@ nav .nav{
     @media (max-width: 1200px){
         nav .nav{
             width: 76%;
-            display: flex;
-            justify-items: center;
-            justify-content: center;
         }   
     }
 
@@ -129,7 +136,7 @@ nav .nav li a:hover{
 }
 
 
-/*---- --------------------------------------------------------------------------*/
+/*---- A R T I C L E --------------------------------------------------------------------------*/
 article{
     width: 100%;
     height: auto;
@@ -159,7 +166,7 @@ section h1{
         }
     }
 
-
+/*----- PAGE CLINICA*/
 #clinica section h1{
     color: rgb(73, 190, 216);
     font-size: 50px;
@@ -267,16 +274,6 @@ aside form button[type=submit]:hover{
 
 
 /*------------------------------------------------------------------------------*/
-.title-section{
-    font-size: 20px;
-    text-align: center;
-    text-transform: uppercase;   
-    color: rgb(73, 190, 216);
-    margin-top: 80px;
-    box-shadow: 0 20px 20px -15px rgba(1, 1, 1, 0.1);
-    padding-bottom: 10px;
-}
-
 .medical-treatment{
     display: grid;
     grid-column-gap: 100px;
@@ -309,6 +306,202 @@ aside form button[type=submit]:hover{
         }
     }
 
+/*---- C O N T A C T --------------------------------------------------------------------------*/
+#contact .contact{
+    width: 100%;    
+    margin-right: 30px;
+}
+
+#contact h1{
+    background: rgb(73, 190, 216);
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#contact p{
+    padding: 0 25px ;
+    color: #666666;
+    margin: 40px 0;
+}
+
+.form-contact{
+    width: 100%;
+    border: 1px solid rgba(73, 190, 216, 0.1);
+}
+
+
+
+#contact form{
+    padding: 0 25px ;  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;  
+}
+
+#contact form b{
+    color: red; 
+}
+
+#contact form div:nth-child(1),
+#contact form div:nth-child(2),
+#contact form div:nth-child(5),
+#contact form div:nth-child(6){
+    grid-column: span 2;
+}
+
+
+    @media (max-width: 767px){
+        #contact .contact{
+            width: 100%;
+            margin:0;
+            padding: 10px;
+        }
+
+        .form-contact{
+            width: 100%;
+            border: none;
+        }
+
+        #contact form{
+            display: flexbox;
+        }
+
+    }
+
+#contact form .input-form + .input-form{
+    margin-top: 20px;
+}
+
+#contact form .input-form input{
+    width: 100%;
+    height: 30px;
+    padding: 10px 0 20px;    
+    font-size: 14px;
+    color: #666;
+    border: 0;
+    border-bottom: 1px solid rgb(73, 190, 216);
+}
+
+#contact form .input-form textarea{
+    width: 100%;
+    padding: 10px 0 20px;    
+    font-size: 14px;
+    color: #666;
+    border: 0;
+    border-bottom: 1px solid rgb(73, 190, 216);
+}
+
+#contact form .input-form select{
+    width: 100%;
+    padding: 10px 0 20px;    
+    font-size: 14px;
+    color: #666;
+    border: 0;
+    border-bottom: 1px solid rgb(73, 190, 216);
+    cursor: pointer;
+}
+
+form .input-form select option{
+    width: 100%;
+    padding: 10px 0 20px;    
+    font-size: 15px;
+    color: #666;
+}
+
+#contact form button[type=submit]{
+    width: 100%;
+    border: 0;
+    margin: 30px 0;
+    background: rgb(73, 190, 216);
+    border-radius: 2px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5;
+    grid-column: span 2;
+}
+
+#contact form button[type=submit]:hover{
+    background: rgba(50, 90, 99, 0.9);
+}
+
+.contact .phone-contact {
+    margin-bottom: 30px;
+}
+
+.contact .phone-contact img{
+    height: 20px;
+}
+
+.contact .phone-contact .phone{
+    font-size: 25px;
+    color: rgb(73, 190, 216);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact .phone-contact .email{
+    margin-top: 10px;
+}
+
+.phone-contact .email a{
+    font-size: 16px;
+    color: rgb(73, 190, 216);
+    margin-top: 10px;
+}
+
+.phone-contact .email a:hover{
+    color: rgba(50, 90, 99, 0.9);
+    text-decoration: none;
+}
+
+/*---- D E N T I S T S --------------------------------------------------------------------------*/
+.dentist{
+    display: grid;
+    grid-column-gap: 100px;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 30px;
+}
+
+    @media (max-width: 800px){
+        .dentist{
+            grid-template-columns: auto;
+        }
+
+        .dentist-professional + .dentist-professional{
+            margin-top: 60px;
+        }
+    }
+
+.dentist .dentist-avatar{
+    text-align: center;
+}
+
+.dentist .dentist-avatar img{
+    height: 180px;
+    border-radius: 50%;
+}
+
+.dentist .dentist-name{
+    text-align: center;
+    font-size: 15px;
+    color: rgb(73, 190, 216);
+    margin: 20px 0 10px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(73, 190, 216);
+}
+
+.dentist .dentist-description{
+    text-align: center;
+}
+
 
 
 /*---- F O O T E R --------------------------------------------------------------------------*/
@@ -323,7 +516,7 @@ footer{
 
 footer .logo img{
     height: 40px;
-    margin: 20px 0;
+    margin: 50px 0 20px;
 }
 
 footer .logo img:hover{
@@ -332,9 +525,10 @@ footer .logo img:hover{
  }
 
 footer .icon-social img{
-    margin: 10px 3px;
+    margin: 10px 3px 40px;
     height: 20px;
     cursor: pointer;
+    
 }
 
 footer .icon-social img:hover{
