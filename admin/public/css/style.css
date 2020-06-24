@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*	Alterando estilo da barra de rolagem vertical*/
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #D3D3D3;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;    
+    outline: 0;
+    
+}
+
+body{
+    background: #fff;   
+    -webkit-font-smoothing: antialiased;
+    color: #666666;
+}
+
+body,
+input,
+button{
+    font-family: Roboto, sans-serif;
+
+}
+
+/*---- H E A D E R --------------------------------------------------------------------------*/
+header{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    background: #fff;
+    padding: 5rem 0rem 1rem ;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 10px -5px rgba(50, 90, 99, 0.08);
+    
+    z-index: 9;
+}
+
+header a img{
+    width: 180px;
+    height: auto;
+    margin-left: 40px;   
+}
+
+header a img:hover{
+    opacity: 0.8;
+    transition: 300ms ease;
+}
+
+header.fixed{
+    position: fixed;
+    opacity: 0.99;
+    top: 0;
+    padding: 3rem 0rem 1rem;
+    transition: all .2s;
+}
+
+/*---- N A V --------------------------------------------------------------------------*/
+nav .nav{
+    width: 80%;
+    display: flex;
+    justify-items: end;
+    justify-content: flex-end;
+}
+
+    @media (max-width: 1200px){
+        nav .nav{
+            width: 76%;
+        }   
+    }
+
+    @media (max-width: 990px){
+        nav .nav{
+            width: 68%;
+        }  
+    }
+
+    @media (max-width: 767px){
+        nav .nav{
+            width: 100%;
+        }   
+
+        span.icon-bar img{
+            width: 30px; 
+            margin-left: 10%;           
+        }
+    }
+
+nav .nav li a{
+    margin-top: 10px;
+    text-transform: uppercase;
+    color:  rgb(67, 135, 150);
+}
+
+nav .nav li a:hover{
+    background: #fff;
+    color:  rgb(73, 190, 216);
+    /*border-bottom: 1px solid rgba(73, 190, 216, 0.16); */
+    transition: 300ms ease;   
+}
+
+/*---- M A I N --------------------------------------------------------------------------*/
+.list-patients{
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.list-hour{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+/* -- PREVIUS  --------------------------------------------- */
+.list-patients .patients-previous p{
+    font-size: 12px;
+}
+
+.list-patients .patients-previous h1{
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+/* -- NOW  --------------------------------------------- */
+.list-patients .patients-now{
+    margin: 0 20px;
+    background: rgb(73, 190, 216);
+    padding: 20px;
+    color: #fff;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 106px;
+    width: 250px;
+}
+
+.list-patients .patients-now p{
+    font-size: 15px;
+    text-align: center;
+}
+
+.list-patients .patients-now h1{
+    font-size: 25px;
+    margin-top: -5px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* -- NEXT ------------------------------------------------ */
+.list-patients .patients-next p{
+    font-size: 12px;
+}
+
+.list-patients .patients-next h1{
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+/* -- ALL ------------------------------------------------ */
+.list-all-patients{
+    width: 50%;
+    border: 1px solid rgba(73, 190, 216, 0.1);
+}
+
+.list-all-patients h1,
+.description h1{
+    background: rgb(73, 190, 216);
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.list-all-patients .list-search{
+    padding: 20px;
+}
+
+.list-all-patients .submit-lente {
+    position:absolute;
+    top:0; 
+    right:0;
+    margin-right: 5px;
+    z-index:10;
+    border:none;
+    background:transparent;
+}
+  
+.list-all-patients .input-search {
+    position: relative;
+    width: 100%;
+}
+  
+.list-all-patients .input-search input {
+    width: 100%;
+    height: 30px;
+    padding: 10px 0 20px;    
+    font-size: 14px;
+    color: #666;
+    border: 0;
+    border-bottom: 1px solid rgb(73, 190, 216);
+    margin-bottom: 50px;
+}
+
+/*-----------------*/
+.list-scheduling,
+.list-scheduling-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 10px 10px;
+    margin-bottom: 5px;    
+}
+
+.list-scheduling-2{    
+    background: rgba(73, 190, 216, 0.1);
+}
+
+.list-scheduling button[type='submit'],
+.list-scheduling-2 button[type='submit']{
+    border: 0;
+    height: 30px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 10px;    
+}
+
+.list-scheduling button[type='submit'].open-description,
+.list-scheduling-2 button[type='submit'].open-description{
+    background: rgb(73, 190, 216); 
+    color: #fff; 
+}
+
+.list-scheduling button[type='submit'].open-description:hover,
+.list-scheduling-2 button[type='submit'].open-description:hover{
+    background: rgb(45, 114, 129); 
+    transition: 400ms;
+}
+
+/*-----------------*/
+.name-scheduling,
+.hour-scheduling{
+    margin-top: 5px;
+}
+
+.hour-scheduling{
+    text-align: center;
+}
+
+
+.description{
+    margin-top: 50px;
+    border: 1px solid rgba(73, 190, 216, 0.1);
+    margin-right: 30px;
+}
+
+.description.hiden{
+    display: none;
+}
+
+.desc-scheduling{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.desc-scheduling div:nth-child(1),
+.desc-scheduling div:nth-child(2){
+    grid-column: span 2;
+    text-align: center;
+}
+
+.desc-scheduling .item .date{
+    font-size: 40px;
+    font-weight: 700;
+    color:rgb(54, 142, 161);
+}
+
+.desc-scheduling .item .hour{
+    font-size: 25px;
+    font-weight: 700;
+    color:rgb(11, 78, 94);
+    border-bottom: 1px solid rgba(73, 190, 216, 0.1);
+    margin-top: -30px;
+    padding-bottom: 20px;
+}
+
+.desc-scheduling div:nth-child(3),
+.desc-scheduling div:nth-child(4){
+    margin: 10px 0;
+}
+
+.desc-scheduling div:nth-child(5){
+    grid-column: span 2;
+    margin-bottom: 30px;
+}
+
+.desc-scheduling button[type='submit']{
+    border: 0;
+    height: 40px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 15px;    
+}
+
+.desc-scheduling button[type='submit'].delete{
+    background: rgb(209, 92, 92);  
+    color: #fff; 
+}
+
+.desc-scheduling button[type='submit'].delete:hover{
+    background: rgb(182, 57, 57);  
+    transition: 400ms;
+}
+
+.desc-scheduling button[type='submit'].alterar{
+    background: rgb(73, 190, 216);  
+    color: #fff; 
+}
+
+.desc-scheduling button[type='submit'].alterar:hover{
+    background:rgb(45, 114, 129);  
+    transition: 400ms;
+}
+
+
+
+
+
+/*---- F O O T E R --------------------------------------------------------------------------*/
+footer{
+    width: 100%;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 10px 10px 12px rgba(50, 90, 99, 0.08);
+}
+
+footer .logo img{
+    height: 40px;
+    margin: 50px 0 20px;
+}
+
+footer .logo img:hover{
+    opacity: .8;
+    transition: 300ms ease;
+ }
+
+footer p{
+    margin: 10px 0 0 0;
+    padding: 20px;
+    height: 50px;
+    background: rgb(73, 190, 216);
+    color: #fff;
+    font-size: 12px;
+}

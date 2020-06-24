@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Odonto</title>
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./public/css/style.css">
+
+</head>
+
+<body>
+    <!----- H E A D E R ------------------------------------------------------------------------------------>
+    <header class="header">
+        <div class="conteiner">
+
+            <nav class="navbar">
+                <div class="container">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar">
+                                    <img src="./public/images/menu.svg" alt="">
+                                </span>
+                            </button>
+
+                            <a href="/">
+                                <img src="./public/images/logo.png" alt="">
+                            </a>
+
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <li><a href="./views/Clinica.html">Cadastro Paciente</a></li>
+                                <li><a href="./views/Clinica.html">Agendamento</a></li>
+                                <li><a href="./views/Dentistas.html">Configurações</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <!----------------------------------------------------------------------------------------->
+
+    <main>
+        <div class="container">
+            
+            <div class="list-patients">
+
+                <div class="patients">
+
+                    <div class="list-hour">
+                        <div class="patients-previous">
+                            <p>10h00</p>
+                            <h1>José Almeida</h1>
+                        </div>
+                        <div class="patients-now">
+                            <p>11h00</p>
+                            <h1>Caio Mendes</h1>
+                        </div>
+                        <div class="patients-next">
+                            <p>13h30</p>
+                            <h1>Marcia Camillo</h1>
+                        </div>
+                    </div>
+
+                <!----------------------------------------------------------------->
+
+                    <div class="description hiden">
+                        <h1>Descrição do <strong>Agendamento</strong></h1>
+
+                        <div class="desc-scheduling">
+                            <div class="item">                                
+                                <p class="date">12/06/2020</p>
+                            </div>
+                            <div class="item">                                
+                                <p class="hour">15h00</p>
+                            </div>                                                       
+                            <div class="item">
+                                <strong>Nome</strong>
+                                <p>Jessé Brisola de Araujo</p>
+                            </div>
+                            <div class="item">
+                                <strong>Telefone/ Celular</strong>
+                                <p>(00) 0 0000-0000</p>
+                            </div> 
+                            <div class="item">
+                                <strong>Descrição</strong>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam porro veniam quaerat pariatur, soluta voluptas facilis ipsa eaque</p>
+                            </div> 
+                            <div class="item">
+                                <button type="submit" class="delete" title="Deletar ">Excluir</button>                           
+                            </div>
+                            <div class="item">
+                                <button type="submit" class="alterar">Alterar</button>                           
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!------------------------------------------------------------------>
+
+                <div class="list-all-patients">
+                    <h1>Lista dos <strong>Agendamentos de hoje</strong></h1>
+
+                    <div class="list-search">
+
+                        <div class="input-search">
+                            <input type="text" placeholder="Buscar" />
+                            <button class="submit-lente" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+
+
+                        <div class="list-scheduling-2">
+                            <div class="name-scheduling">José Almeida</div>
+                            <div class="hour-scheduling">10h00</div>
+                            <button type="submit" class="open-description" title="">Descrição</button>
+                        </div>
+
+                        <div class="list-scheduling">
+                            <div class="name-scheduling">Caio Mendes</div>
+                            <div class="hour-scheduling">11h00</div>
+                            <button type="submit" class="open-description" title="">Descrição</button>
+                        </div>
+
+                        <div class="list-scheduling-2">
+                            <div class="name-scheduling">Marcia Camillo</div>
+                            <div class="hour-scheduling">13h30</div>
+                            <button type="submit" class="open-description" title="">Descrição</button>
+                        </div>
+
+                        <div class="list-scheduling">
+                            <div class="name-scheduling">Jessé Brisola de Araujo</div>
+                            <div class="hour-scheduling">15h00</div>
+                            <button type="submit" class="open-description" title="">Descrição</button>
+                        </div>
+
+                        
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </main>
+
+    <!----- F O O T E R ------------------------------------------------------------------------------------>
+    <footer>
+        <div class="container">
+
+            <a class="logo" href="/">
+                <img src="./public/images/logo.png" alt="">
+            </a>
+
+        </div>
+
+        <p>Todos os Direitos Reservados - 2020/2020</p>
+
+    </footer>
+
+    <!--my js-->
+    <script src="./public/js/script.js"></script>
+
+    <!--bootstrap-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

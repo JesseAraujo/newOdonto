@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    <title>New Odonto</title>
+    {% endblock title %}
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!--my css-->
+    <link rel="stylesheet" href="/styles/style.css">
+
+</head>
+
+<body>
+
+    {% include "partials/header.html" %}
+
+
+    {% block conteiner %}
+    {% endblock conteiner %}
+
+
+    {% include "partials/footer.html" %}
+
+    <!--my js-->
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/array.js"></script>
+
+    <!--bootstrap-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
