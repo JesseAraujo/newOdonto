@@ -1,0 +1,76 @@
+{% extends  "layout.html" %}
+
+{% set route = "/MeusAgendamentos" %}
+
+{% block title %}
+<title>New Odonto | Meu Agendamento</title>
+{% endblock title %}
+
+
+
+{% block css %}
+<link rel="stylesheet" href="/styles/meuAgendamento.css">
+{% endblock css %}
+
+{% block conteiner %}
+<div class="container">
+
+    {{ id }}
+
+    {% if total > 0 %}
+
+    <div class="agendamento">
+
+        <div class="titulo">
+            <h1>Meu <strong>agendamento</strong></h1>
+        </div>
+
+        <h2>{{ schedules[id].subject }}</h2>
+
+        <div class="gridAgendamento">
+
+            <div class="itemAgendamento">
+                <h3>Nome</h3>
+                {{ schedules[0].name }}
+            </div>
+            <div class="itemAgendamento">
+                <h3>CPF</h3>
+                {{ schedules[0].cpf }}
+            </div>
+            <div class="itemAgendamento">
+                <h3>E-mail</h3>
+                {{ schedules[0].email }}
+            </div>
+            <div class="itemAgendamento">
+                <h3>Telefone/Celular</h3>
+                {{ schedules[0].phone }}
+            </div>
+            <div class="itemAgendamento">
+                <h3>Data</h3>
+                {{ schedules[0].date }}/ {{ schedules[0].month }}/ 2020
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="button">
+
+        <button class="imprimir">Imprimir</button>
+        <a href="{{ route }}/{{ schedules[0].id }}">
+            <button class="cancelar">Cancelar Agendamento</button>
+        </a>
+    </div>
+
+    {% else %}
+
+        <h4><strong>Nenhum </strong>agendamento encontrado</h4>
+
+        {% endif %}
+
+
+</div>
+
+
+
+{% endblock conteiner %}

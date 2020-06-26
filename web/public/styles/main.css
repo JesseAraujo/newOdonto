@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+:root{
+    --primary-color: rgb(73, 190, 216);
+    --button-hover-color: rgba(50, 90, 99, 0.9);
+}
+
 /*	Alterando estilo da barra de rolagem vertical*/
 ::-webkit-scrollbar-track {
     background-color: #F4F4F4;
@@ -20,6 +25,7 @@
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+
 }
 
 body{
@@ -35,6 +41,24 @@ button{
 
 }
 
+button{
+    border: none;
+    text-transform: uppercase;
+
+    border-radius: 2px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5;
+}
+
+a:link 
+{ 
+ text-decoration:none; 
+} 
+
 .flex {
 	display: flex;
 }
@@ -49,12 +73,20 @@ button{
     font-size: 20px;
     text-align: center;
     text-transform: uppercase;   
-    color: rgb(73, 190, 216);
+    color: var(--primary-color);
     margin: 80px 0;
     box-shadow: 0 20px 20px -15px rgba(1, 1, 1, 0.1);
     padding-bottom: 10px;
 }
 
+.titulo h1{
+    background: var(--primary-color);
+    padding: 20px 0;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
 
 /*---- H E A D E R --------------------------------------------------------------------------*/
 
@@ -130,7 +162,7 @@ nav .nav li a{
 
 nav .nav li a:hover{
     background: #fff;
-    color:  rgb(73, 190, 216);
+    color:  var(--primary-color);
     /*border-bottom: 1px solid rgba(73, 190, 216, 0.16); */
     transition: 300ms ease;   
 }
@@ -155,7 +187,7 @@ section{
 }
 
 section h1{
-    color: rgb(73, 190, 216);
+    color: var(--primary-color);
     font-size: 20px;
 }
 
@@ -168,7 +200,7 @@ section h1{
 
 /*----- PAGE CLINICA*/
 #clinica section h1{
-    color: rgb(73, 190, 216);
+    color: var(--primary-color);
     font-size: 50px;
 }
 
@@ -177,7 +209,7 @@ section h1{
     font-weight: bold;
     text-transform: uppercase;
     font-size: 16px;
-    background: rgb(73, 190, 216);
+    background: var(--primary-color);
     padding: 10px;
     margin-bottom: 10px;
     border-top-right-radius: 100px;
@@ -193,7 +225,7 @@ section h1{
             font-weight: bold;
             text-transform: uppercase;
             font-size: 16px;
-            background: rgb(73, 190, 216);
+            background: var(--primary-color);
             padding: 10px;
             margin-bottom: 10px;
             border-top-right-radius: 100px;
@@ -213,7 +245,7 @@ aside{
 }
 
 aside h1{
-    background: rgb(73, 190, 216);
+    background: var(--primary-color);
     color: #fff;
     font-size: 20px;
     text-transform: uppercase;
@@ -234,7 +266,7 @@ aside form{
     color: #666;
 }
 
-aside form .input-form + .input-form{
+aside form .input-form{
     margin-top: 20px;
 }
 
@@ -245,7 +277,7 @@ aside form .input-form input{
     font-size: 14px;
     color: #666;
     border: 0;
-    border-bottom: 1px solid rgb(73, 190, 216);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 aside .group-input-form{
@@ -254,23 +286,21 @@ aside .group-input-form{
     justify-content: space-between;
     color: #666;
 
-    margin-top: 15px;
 }
 
 aside .group-input-form .input-form + .input-form{
     margin-left: 30px;
 }
 
-aside .group-input-form select{
+aside .group-input-form .input-form select{
     color: #666;
 
     width: 100%;
-    height: 30px;
-    padding: 10px 0 20px;    
+    height: 30px;   
     font-size: 14px;
     color: #666;
     border: 0;
-    border-bottom: 1px solid rgb(73, 190, 216);
+    border-bottom: 1px solid var(--primary-color);
 
     cursor: pointer;
 }
@@ -279,7 +309,7 @@ aside form button[type=submit]{
     width: 100%;
     border: 0;
     margin-top: 30px;
-    background: rgb(73, 190, 216);
+    background: var(--primary-color);
     border-radius: 2px;
     padding: 15px 20px;
     font-size: 16px;
@@ -316,7 +346,7 @@ aside form button[type=submit]:hover{
 
 .treatment h3{
     font-size: 18px;
-    color: rgb(73, 190, 216);
+    color: var(--primary-color);
 }
 
 .treatment img{
@@ -335,160 +365,7 @@ aside form button[type=submit]:hover{
         }
     }
 
-/*---- C O N T A C T --------------------------------------------------------------------------*/
-#contact .contact{
-    width: 100%;    
-    margin-right: 30px;
-}
 
-#contact h1{
-    background: rgb(73, 190, 216);
-    color: #fff;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 20px 0;
-}
-
-#contact p{
-    padding: 0 25px ;
-    color: #666666;
-    margin: 40px 0;
-}
-
-.form-contact{
-    width: 100%;
-    border: 1px solid rgba(73, 190, 216, 0.1);
-}
-
-
-
-#contact form{
-    padding: 0 25px ;  
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    gap: 20px;  
-}
-
-#contact form b{
-    color: red; 
-}
-
-#contact form div:nth-child(1),
-#contact form div:nth-child(2),
-#contact form div:nth-child(5),
-#contact form div:nth-child(6){
-    grid-column: span 2;
-}
-
-
-    @media (max-width: 767px){
-        #contact .contact{
-            width: 100%;
-            margin:0;
-            padding: 10px;
-        }
-
-        .form-contact{
-            width: 100%;
-            border: none;
-        }
-
-        #contact form{
-            display: flexbox;
-        }
-
-    }
-
-#contact form .input-form + .input-form{
-    margin-top: 20px;
-}
-
-#contact form .input-form input{
-    width: 100%;
-    height: 30px;
-    padding: 10px 0 20px;    
-    font-size: 14px;
-    color: #666;
-    border: 0;
-    border-bottom: 1px solid rgb(73, 190, 216);
-}
-
-#contact form .input-form textarea{
-    width: 100%;
-    padding: 10px 0 20px;    
-    font-size: 14px;
-    color: #666;
-    border: 0;
-    border-bottom: 1px solid rgb(73, 190, 216);
-}
-
-#contact form .input-form select{
-    width: 100%;
-    padding: 10px 0 20px;    
-    font-size: 14px;
-    color: #666;
-    border: 0;
-    border-bottom: 1px solid rgb(73, 190, 216);
-    cursor: pointer;
-}
-
-form .input-form select option{
-    width: 100%;
-    padding: 10px 0 20px;    
-    font-size: 15px;
-    color: #666;
-}
-
-#contact form button[type=submit]{
-    width: 100%;
-    border: 0;
-    margin: 30px 0;
-    background: rgb(73, 190, 216);
-    border-radius: 2px;
-    padding: 15px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.5;
-    grid-column: span 2;
-}
-
-#contact form button[type=submit]:hover{
-    background: rgba(50, 90, 99, 0.9);
-}
-
-.contact .phone-contact {
-    margin-bottom: 30px;
-}
-
-.contact .phone-contact img{
-    height: 20px;
-}
-
-.contact .phone-contact .phone{
-    font-size: 25px;
-    color: rgb(73, 190, 216);
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.contact .phone-contact .email{
-    margin-top: 10px;
-}
-
-.phone-contact .email a{
-    font-size: 16px;
-    color: rgb(73, 190, 216);
-    margin-top: 10px;
-}
-
-.phone-contact .email a:hover{
-    color: rgba(50, 90, 99, 0.9);
-    text-decoration: none;
-}
 
 /*---- D E N T I S T S --------------------------------------------------------------------------*/
 .dentist{
@@ -520,11 +397,11 @@ form .input-form select option{
 .dentist .dentist-name{
     text-align: center;
     font-size: 15px;
-    color: rgb(73, 190, 216);
+    color: var(--primary-color);
     margin: 20px 0 10px;
     text-transform: uppercase;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgb(73, 190, 216);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .dentist .dentist-description{
@@ -569,7 +446,7 @@ footer p{
     margin: 10px 0 0 0;
     padding: 20px;
     height: 50px;
-    background: rgb(73, 190, 216);
+    background: var(--primary-color);
     color: #fff;
     font-size: 12px;
 }

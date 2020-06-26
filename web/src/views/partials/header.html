@@ -1,4 +1,6 @@
- <!----- H E A D E R ------------------------------------------------------------------------------------>
+{% set route = "/MeusAgendamentos" %}
+
+<!----- H E A D E R ------------------------------------------------------------------------------------>
  <header class="header">
     <div class="conteiner">
 
@@ -22,7 +24,8 @@
                             <li><a href="/Clinica">Clínica</a></li>
                             <li><a href="/Dentistas">Dentistas</a></li>
                             <li><a href="/Contato">Contato</a></li>
-                        </ul>
+                            <li><a href="{{ route }}/{{ schedules[0].id }}">Meus Agendamentos</a></li>
+                        </ul>                       
 
                     </div>
 
@@ -32,5 +35,6 @@
     </div>
 
 </header>
+
 
 <!----------------------------------------------------------------------------------------->

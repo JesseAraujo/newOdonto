@@ -28,7 +28,8 @@
             reprehenderit! Eius distinctio consequatur quisquam!
         </p>
 
-        <form>
+        <form action="/Agendamento" method="POST">
+
             <div class="input-form">
                 <label for="name">Nome</label>
                 <input type="text" name="name" placeholder="Nome">
@@ -36,7 +37,7 @@
 
             <div class="input-form">
                 <label for="cpf">CPF</label>
-                <input type="text" name="CPF" placeholder="123.456.789-10" maxlength="14"
+                <input type="text" name="cpf" placeholder="123.456.789-10" maxlength="14"
                     onkeypress="formatar('###.###.###-##', this);" />
             </div>
 
@@ -48,27 +49,36 @@
             <div class="input-form">
                 <label for="phone-number">Telefone/ Celular</label>
                 <input type="text" placeholder="(00) 0000-0000" maxlength="11" onblur="mascaraDeTelefone(this)"
-                    onkeypress="tiraHP(this)" />
+                    onkeypress="tiraHP(this)" name="phone"/>
             </div>
 
             <div class="group-input-form">
 
                 <div class="input-form">
-                    <label for="date">Data</label>
-                    <select required>
-                        <option value="">01/06/2020</option>
-                        <option value="">02/06/2020</option>
-                        <option value="">03/06/2020</option>
-                        <option value="">04/06/2020</option>
+                    <label for="day">Dia</label>
+                    <select name="day" required>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                    </select>
+                </div>
+
+                <div class="input-form">
+                    <label for="month">Mês</label>
+                    <select name="month" required>
+                        <option value="JAN">JAN</option>
+                        <option value="FEV">FEV</option>
+                        <option value="MAR">MAR</option>
                     </select>
                 </div>
 
                 <div class="input-form">
                     <label for="hour">Horario</label>
-                    <select required>
-                        <option value="">10h00</option>
-                        <option value="">11h00</option>
-                        <option value="">12h00</option>
+                    <select name="hour" required>
+                        <option value="10h00">10h00</option>
+                        <option value="11h00">11h00</option>
+                        <option value="12h00">12h00</option>
                     </select>
                 </div>
 

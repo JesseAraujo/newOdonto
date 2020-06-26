@@ -4,12 +4,16 @@
 <title>New Odonto | Contato</title>
 {% endblock title %}
 
+{% block css %}
+<link rel="stylesheet" href="/styles/contato.css">
+{% endblock css %}
+
 
 {% block conteiner %}
-<div class="container flex" id="contact">
+<div class="container flex" id="contato">
 
-    <div class="contact">
-        <div class="phone-contact">
+    <div class="contato">
+        <div class="phone-contato">
             <img src="https://image.flaticon.com/icons/png/512/876/876056.png" alt="">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
@@ -31,8 +35,11 @@
         </iframe>
     </div>
 
-    <div class="form-contact">
-        <h1>Nos envie uma <strong>mensagem</strong></h1>
+    <div class="form-contato">
+        <div class="titulo">
+            <h1>Nos envie uma <strong>mensagem</strong></h1>
+        </div>
+        
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci veniam tempore atque voluptatibus
             asperiores, laborum cum voluptatem accusamus omnis</p>
 
