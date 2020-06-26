@@ -12,9 +12,10 @@
     <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    
+
     <!--my css-->
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/modalSucessError.css">
     {% block css %}
     {% endblock css %}
 
@@ -31,6 +32,10 @@
 
 
     {% include "partials/footer.html" %}
+
+    {% block modal %}
+        {#--- block modal---#}
+    {% endblock modal %}
 
     <!--my js-->
     <script src="/scripts/script.js"></script>

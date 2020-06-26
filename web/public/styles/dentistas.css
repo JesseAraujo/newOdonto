@@ -1,0 +1,54 @@
+
+/*---- D E N T I S T S --------------------------------------------------------------------------*/
+.dent-title img,
+.dent-title video{
+    width: 100%;
+    margin: 30px 0 80px;
+}
+    
+.dent-title h1{
+    color: var(--primary-color);
+}
+
+.dentist{
+    display: grid;
+    grid-column-gap: 100px;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 30px;
+}
+
+
+    @media (max-width: 800px){
+        .dentist{
+            grid-template-columns: auto;
+        }
+
+        .dentist-professional + .dentist-professional{
+            margin-top: 60px;
+        }
+    }
+
+
+
+.dentist .dentist-avatar{
+    text-align: center;
+}
+
+.dentist .dentist-avatar img{
+    height: 180px;
+    border-radius: 50%;
+}
+
+.dentist .dentist-name{
+    text-align: center;
+    font-size: 15px;
+    color: var(--primary-color);
+    margin: 20px 0 10px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.dentist .dentist-description{
+    text-align: center;
+}

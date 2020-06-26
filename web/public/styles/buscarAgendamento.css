@@ -1,0 +1,26 @@
+.buscarAgendamento{
+    width: 40%;
+    margin: 80px auto;
+}
+
+.buscarAgendamento h1{
+    color: var(--primary-color);
+}
+
+.buscarAgendamento input{
+    width: 100%;  
+    margin-top: 50px; 
+}
+
+.buscarAgendamento button{
+    width: 100%;   
+}
+
+button{
+    background: var(--primary-color);
+    margin-top: 30px;        
+}
+
+button:hover{
+    background: var(--button-hover-color);
+}

@@ -88,83 +88,27 @@ a:link
     text-align: center;
 }
 
-/*---- H E A D E R --------------------------------------------------------------------------*/
-
-header{
+input,
+select,
+textarea{
     width: 100%;
-    height: auto;
-    text-align: center;
-    margin-bottom: 50px;
-    background: #fff;
-    padding: 5rem 0rem 1rem ;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 10px -5px rgba(50, 90, 99, 0.08);
-    
-    z-index: 9;
+    padding: 10px 0 10px;    
+    font-size: 14px;
+    color: #666;
+    border: 0;
+    border-bottom: 1px solid var(--primary-color);
 }
 
-header a img{
-    width: 180px;
-    height: auto;
-    margin-left: 40px;   
+select{
+    cursor: pointer;
+    padding: 0 0 10px; 
 }
 
-header a img:hover{
-    opacity: 0.8;
-    transition: 300ms ease;
-}
-
-header.fixed{
-    position: fixed;
-    opacity: 0.99;
-    top: 0;
-    padding: 3rem 0rem 1rem;
-    transition: all .2s;
-}
-
-/*---- N A V --------------------------------------------------------------------------*/
-nav .nav{
-    width: 80%;
-    display: flex;
-    justify-items: end;
-    justify-content: flex-end;
-}
-
-    @media (max-width: 1200px){
-        nav .nav{
-            width: 76%;
-        }   
-    }
-
-    @media (max-width: 990px){
-        nav .nav{
-            width: 68%;
-        }  
-    }
-
-    @media (max-width: 767px){
-        nav .nav{
-            width: 100%;
-        }   
-
-        span.icon-bar img{
-            width: 30px; 
-            margin-left: 10%;           
-        }
-    }
-
-nav .nav li a{
-    margin-top: 10px;
-    text-transform: uppercase;
-    color:  rgb(67, 135, 150);
-}
-
-nav .nav li a:hover{
-    background: #fff;
-    color:  var(--primary-color);
-    /*border-bottom: 1px solid rgba(73, 190, 216, 0.16); */
-    transition: 300ms ease;   
+select option{
+    width: 100%;
+    padding: 10px 0 20px;    
+    font-size: 15px;
+    color: #666;
 }
 
 
@@ -173,22 +117,17 @@ article{
     width: 100%;
     height: auto;
     margin-right: 10px;
+    text-align: justify;
 }
 
 article img,
 article video{
     width: 100%;
+    margin: 30px 0;
 }
 
-section{    
-    height: auto;
-    padding: 10px;
-    text-align: justify;
-}
-
-section h1{
+article h1{
     color: var(--primary-color);
-    font-size: 20px;
 }
 
     @media (max-width: 767px){
@@ -198,43 +137,8 @@ section h1{
         }
     }
 
-/*----- PAGE CLINICA*/
-#clinica section h1{
-    color: var(--primary-color);
-    font-size: 50px;
-}
 
-#clinica .mvv .title-mvv{
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 16px;
-    background: var(--primary-color);
-    padding: 10px;
-    margin-bottom: 10px;
-    border-top-right-radius: 100px;
-}
 
-    @media (max-width: 767px){
-        #clinica .mvv{
-            width: 98%;
-        }
-
-        #clinica .mvv .title-mvv{
-            color: #fff;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 16px;
-            background: var(--primary-color);
-            padding: 10px;
-            margin-bottom: 10px;
-            border-top-right-radius: 100px;
-        }
-
-        #clinica .mvv .col-md-4 + .col-md-4{
-            margin-top: 30px;
-        }
-    }
 
 /*---- A S I D E --------------------------------------------------------------------------*/
 aside{
@@ -366,47 +270,6 @@ aside form button[type=submit]:hover{
     }
 
 
-
-/*---- D E N T I S T S --------------------------------------------------------------------------*/
-.dentist{
-    display: grid;
-    grid-column-gap: 100px;
-    grid-template-columns: auto auto auto;
-    margin-bottom: 30px;
-}
-
-    @media (max-width: 800px){
-        .dentist{
-            grid-template-columns: auto;
-        }
-
-        .dentist-professional + .dentist-professional{
-            margin-top: 60px;
-        }
-    }
-
-.dentist .dentist-avatar{
-    text-align: center;
-}
-
-.dentist .dentist-avatar img{
-    height: 180px;
-    border-radius: 50%;
-}
-
-.dentist .dentist-name{
-    text-align: center;
-    font-size: 15px;
-    color: var(--primary-color);
-    margin: 20px 0 10px;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--primary-color);
-}
-
-.dentist .dentist-description{
-    text-align: center;
-}
 
 
 

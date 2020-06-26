@@ -36,6 +36,10 @@ server.get("/Contato", (req, res) => {
     return res.render(__dirname + "/views/contato.html")
 })
 
+server.get("/BuscarAgendamento", (req, res) => {
+    return res.render(__dirname + "/views/buscarMeuAgendamento.html")
+})
+
 
 //-------------------------------------------------------
 //
@@ -77,7 +81,7 @@ server.post("/Agendamento", (req, res) => {
         console.log('Cadastrado com sucesso')
         console.log(this)
 
-        return res.render(__dirname + "/views/index.html")
+        return res.render(__dirname + "/views/index.html", { saved: true })
     }
 
     db.run(query, values, afterInsertData)
@@ -86,6 +90,7 @@ server.post("/Agendamento", (req, res) => {
 //-------------------------------------------------------
 //
 server.get("/MeusAgendamentos", (req, res) => {
+    const id = req.params.id
 
     db.all(`SELECT * FROM schedules`, function (err, rows) {
         if (err) {
@@ -93,41 +98,48 @@ server.get("/MeusAgendamentos", (req, res) => {
         }
 
         const total = rows.length
-
-        
-
-        return res.render(__dirname + "/views/meuAgendamento.html", { schedules: rows, total })
-    })
-
-})
-
-server.get("/MeusAgendamentos/:id", (req, res) => {
-    const  id  = req.params.id
-
-    db.all(`SELECT * FROM schedules WHERE id =?`,[id], function (err, rows) {
-        if (err) {
-            return console.log(err)
-        }
-
-        const total = rows.length
         console.log(id)
 
-        return res.render(__dirname + "/views/meuAgendamento.html", { schedules: rows, id: id })
+        return res.render(__dirname + "/views/meuAgendamento.html", { schedules: rows, total, id: id })
     })
 
 })
 
 //-------------------------------------------------------
-//
-server.get("/MeuAgendamento/:id", function (req, res) {
-    const  id  = req.params.id
+//Buscar
+server.get("/search", (req, res) => {
+    const search = req.query.search
 
-    db.run("DELETE FROM schedules WHERE id =?",[id], function(err) {
-        if (err){
-             return res.send("Erro no banco de dados!")
-         }
-         //return res.redirect("/search")
-         return res.render(__dirname + "/views/index.html")
+    if (search == "") {
+        return res.render(__dirname + "/views/meuAgendamento.html", { total: 0 })
+    }
+
+    //pegar dados do bd
+    db.all(`SELECT * FROM schedules WHERE cpf = '${search}'`, function (err, rows) {
+        if (err) {
+            return console.log(err)
+        }
+
+        const total = rows.length
+
+        //console.log(total)
+        //mostrar página com dados do bd
+        return res.render(__dirname + "/views/meuAgendamento.html", { schedules: rows, total: total })
+
+    })
+})
+
+//-------------------------------------------------------
+//deletar
+server.get("/MeusAgendamentos/:id", function (req, res) {
+    const id = req.params.id
+
+    db.run("DELETE FROM schedules WHERE id =?", [id], function (err) {
+        if (err) {
+            return res.send("Erro no banco de dados!")
+        }
+        //return res.redirect("/search")
+        return res.render(__dirname + "/views/index.html", { cancel: true })
     })
 
 })

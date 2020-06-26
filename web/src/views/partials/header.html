@@ -1,7 +1,9 @@
-{% set route = "/MeusAgendamentos" %}
+{% block css %}
+<link rel="stylesheet" href="/styles/header.css">
+{% endblock css %}
 
 <!----- H E A D E R ------------------------------------------------------------------------------------>
- <header class="header">
+<header class="header">
     <div class="conteiner">
 
         <nav class="navbar">
@@ -21,11 +23,12 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
+                            <li><a href="/">Início</a></li>
                             <li><a href="/Clinica">Clínica</a></li>
                             <li><a href="/Dentistas">Dentistas</a></li>
                             <li><a href="/Contato">Contato</a></li>
-                            <li><a href="{{ route }}/{{ schedules[0].id }}">Meus Agendamentos</a></li>
-                        </ul>                       
+                            <li class="search"><a href="/BuscarAgendamento">Meus Agendamentos</a></li>
+                        </ul>
 
                     </div>
 

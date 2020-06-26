@@ -1,0 +1,26 @@
+{% extends  "layout.html" %}
+
+{% block title %}
+<title>New Odonto | Buscar Agendamento</title>
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="/styles/buscarAgendamento.css">
+{% endblock css %}
+
+
+{% block conteiner %}
+
+<div class="container">
+    <div class="buscarAgendamento">
+        <h1>Digite <strong>seu CPF</strong> </h1>
+        
+        <form action="/search" method="GET">
+            <input name="search" type="text" required placeholder="123.456.789-00" maxlength="14"
+            onkeypress="formatar('###.###.###-##', this);">
+            <button>Pesquisar</button>
+        </form>
+    </div>
+</div>
+
+{% endblock conteiner %}

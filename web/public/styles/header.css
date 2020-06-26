@@ -1,0 +1,88 @@
+/*---- H E A D E R --------------------------------------------------------------------------*/
+
+header{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    background: #fff;
+    padding: 5rem 0rem 1rem ;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 10px -5px rgba(50, 90, 99, 0.08);
+    
+    z-index: 9;
+}
+
+header a img{
+    width: 180px;
+    height: auto;
+    margin-left: 40px;   
+}
+
+header a img:hover{
+    opacity: 0.8;
+    transition: 300ms ease;
+}
+
+header.fixed{
+    position: fixed;
+    opacity: 0.99;
+    top: 0;
+    padding: 3rem 0rem 1rem;
+    transition: all .2s;
+}
+
+/*---- N A V --------------------------------------------------------------------------*/
+nav .nav{
+    width: 80%;
+    display: flex;
+    justify-items: end;
+    justify-content: flex-end;
+}
+
+    @media (max-width: 1200px){
+        nav .nav{
+            width: 76%;
+        }   
+    }
+
+    @media (max-width: 990px){
+        nav .nav{
+            width: 68%;
+        }  
+    }
+
+    @media (max-width: 767px){
+        nav .nav{
+            width: 100%;
+        }   
+
+        span.icon-bar img{
+            width: 30px; 
+            margin-left: 10%;           
+        }
+    }
+
+nav .nav li a{
+    margin-top: 10px;
+    text-transform: uppercase;
+    color:  rgb(67, 135, 150);
+}
+
+nav .nav li a:hover{
+    background: #fff;
+    color:  var(--primary-color);
+    /*border-bottom: 1px solid rgba(73, 190, 216, 0.16); */
+    transition: 300ms ease;   
+}
+
+nav .nav li.search a{
+    background: var(--primary-color);
+    border-radius: 8px;
+    color: #fff;
+}
+
+nav .nav li.search a:hover{
+    background: var(--button-hover-color);
+}
