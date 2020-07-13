@@ -51,3 +51,8 @@ button.cancelar{
 button.cancelar:hover{
     background: #5e3333;
 }
+
+.nenhumAgendamento {
+    text-align: center;
+    margin: 80px 0 100px;
+}

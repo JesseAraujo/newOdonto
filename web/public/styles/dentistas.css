@@ -1,8 +1,6 @@
 
 /*---- D E N T I S T S --------------------------------------------------------------------------*/
-.dent-title img,
-.dent-title video{
-    width: 100%;
+.dent-title {
     margin: 30px 0 80px;
 }
     
@@ -14,7 +12,7 @@
     display: grid;
     grid-column-gap: 100px;
     grid-template-columns: auto auto auto;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
 }
 
 

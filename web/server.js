@@ -2,7 +2,7 @@ const express = require("express")
 const server = express()
 
 //exportar db
-const db = require("./database/db")
+const db = require("./src/database/db")
 
 //pasta publica
 server.use(express.static("public"))
@@ -10,34 +10,36 @@ server.use(express.static("public"))
 //habilitar o uso do req.body na nossa aplicação
 server.use(express.urlencoded({ extended: true }))
 
+server.set("view engine", "njk")
 
 //template engine
 const nunjucks = require("nunjucks")
 nunjucks.configure("src/views", {
     express: server,
     noCache: true,
+    autoescape: false,
 })
 
 
 //rotas da páginas
 server.get("/", (req, res) => {
-    return res.render(__dirname + "/views/index.html")
+    return res.render("home")
 })
 
 server.get("/Clinica", (req, res) => {
-    return res.render(__dirname + "/views/clinica.html")
+    return res.render("clinica")
 })
 
 server.get("/Dentistas", (req, res) => {
-    return res.render(__dirname + "/views/dentistas.html")
+    return res.render("dentistas")
 })
 
 server.get("/Contato", (req, res) => {
-    return res.render(__dirname + "/views/contato.html")
+    return res.render("contato")
 })
 
 server.get("/BuscarAgendamento", (req, res) => {
-    return res.render(__dirname + "/views/buscarMeuAgendamento.html")
+    return res.render("buscarMeuAgendamento")
 })
 
 
@@ -81,7 +83,7 @@ server.post("/Agendamento", (req, res) => {
         console.log('Cadastrado com sucesso')
         console.log(this)
 
-        return res.render(__dirname + "/views/index.html", { saved: true })
+        return res.render("home", { saved: true })
     }
 
     db.run(query, values, afterInsertData)
@@ -100,7 +102,7 @@ server.get("/MeusAgendamentos", (req, res) => {
         const total = rows.length
         console.log(id)
 
-        return res.render(__dirname + "/views/meuAgendamento.html", { schedules: rows, total, id: id })
+        return res.render("meuAgendamento", { schedules: rows, total, id: id })
     })
 
 })
@@ -111,7 +113,7 @@ server.get("/search", (req, res) => {
     const search = req.query.search
 
     if (search == "") {
-        return res.render(__dirname + "/views/meuAgendamento.html", { total: 0 })
+        return res.render("meuAgendamento", { total: 0 })
     }
 
     //pegar dados do bd
@@ -124,7 +126,7 @@ server.get("/search", (req, res) => {
 
         //console.log(total)
         //mostrar página com dados do bd
-        return res.render(__dirname + "/views/meuAgendamento.html", { schedules: rows, total: total })
+        return res.render("meuAgendamento", { schedules: rows, total: total })
 
     })
 })
@@ -139,7 +141,7 @@ server.get("/MeusAgendamentos/:id", function (req, res) {
             return res.send("Erro no banco de dados!")
         }
         //return res.redirect("/search")
-        return res.render(__dirname + "/views/index.html", { cancel: true })
+        return res.render("home", { cancel: true })
     })
 
 })

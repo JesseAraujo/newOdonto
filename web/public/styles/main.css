@@ -313,3 +313,28 @@ footer p{
     color: #fff;
     font-size: 12px;
 }
+
+
+#subirTopo {
+    text-decoration: none;
+    background: var(--primary-color);
+    
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 15px;
+
+    opacity: .8;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+#subirTopo:hover {
+    opacity:1;
+    transition: 400ms;
+} 
