@@ -14,16 +14,7 @@ header{
     z-index: 9;
 }
 
-header a img{
-    width: 180px;
-    height: auto;
-    margin-left: 40px;   
-}
 
-header a img:hover{
-    opacity: 0.8;
-    transition: 300ms ease;
-}
 
 header.fixed{
     position: fixed;
@@ -41,12 +32,38 @@ nav .nav{
     justify-content: flex-end;
 }
 
-    @media (max-width: 1200px){
+nav .logo a img{
+    width: 180px;
+    height: auto;
+    margin-left: 40px;   
+}
+
+nav .logo a img:hover{
+    opacity: 0.8;
+    transition: 300ms ease;
+}
+
+    @media only screen and (max-width: 1010px){
+        
+        nav {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        nav .logo{
+            margin: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+              
         nav .nav{
-            width: 76%;
+            width: 100%;
+            justify-items: center;
+            justify-content: center;
         }   
     }
-
+/*
     @media (max-width: 990px){
         nav .nav{
             width: 68%;
@@ -63,7 +80,7 @@ nav .nav{
             margin-left: 10%;           
         }
     }
-
+*/
 nav .nav li a{
     margin-top: 10px;
     text-transform: uppercase;

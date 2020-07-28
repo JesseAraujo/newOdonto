@@ -1,6 +1,7 @@
 .buscarAgendamento{
     width: 40%;
-    margin: 80px auto;
+    height: 52vh;
+    margin: 0 auto;
 }
 
 .buscarAgendamento h1{
@@ -14,13 +15,4 @@
 
 .buscarAgendamento button{
     width: 100%;   
-}
-
-button{
-    background: var(--primary-color);
-    margin-top: 30px;        
-}
-
-button:hover{
-    background: var(--button-hover-color);
 }
