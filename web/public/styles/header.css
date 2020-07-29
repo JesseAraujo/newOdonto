@@ -25,17 +25,27 @@ header.fixed{
 }
 
 /*---- N A V --------------------------------------------------------------------------*/
+.nav-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    gap: 20px;
+
+    justify-content: space-between;
+}
+
 nav .nav{
-    width: 80%;
-    display: flex;
-    justify-items: end;
-    justify-content: flex-end;
+    width: 100%;  
 }
 
 nav .logo a img{
-    width: 180px;
-    height: auto;
-    margin-left: 40px;   
+    width: 40%;
+    height: auto;  
+}
+
+.logo {
+    text-align: left;
 }
 
 nav .logo a img:hover{
@@ -43,44 +53,64 @@ nav .logo a img:hover{
     transition: 300ms ease;
 }
 
-    @media only screen and (max-width: 1010px){
-        
+    @media only screen and (max-width: 1200px){
+        .nav-grid {
+            display: initial;
+        }
+
         nav {
             width: 100%;
-            display: flex;
-            flex-direction: row;
         }
 
         nav .logo{
             margin: 0;
             width: 100%;
             box-sizing: border-box;
+            text-align: center;
+        }
+
+        nav .logo a img{
+            width: 20%;
+            height: auto;  
         }
               
         nav .nav{
             width: 100%;
+            display: flex;
             justify-items: center;
             justify-content: center;
         }   
     }
-/*
-    @media (max-width: 990px){
-        nav .nav{
-            width: 68%;
-        }  
-    }
+
 
     @media (max-width: 767px){
         nav .nav{
             width: 100%;
+            display: block;
         }   
+
+        nav .logo a img{
+            width: 180px;
+            height: auto;  
+        }
+
+        .navbar-header{
+            position: relative;
+        }
+
+        .navbar-header button{
+            position: absolute;
+            right: 0;
+
+            z-index: 999;
+        }
 
         span.icon-bar img{
             width: 30px; 
-            margin-left: 10%;           
+            margin-left: 5%;
         }
     }
-*/
+
 nav .nav li a{
     margin-top: 10px;
     text-transform: uppercase;
